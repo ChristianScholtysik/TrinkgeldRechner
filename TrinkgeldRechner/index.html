@@ -1,13 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>TrinkgeldRechner</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <main>
+      <div>
+        <h2>Trinkgeld-Rechner</h2>
+        <form action="">
+          <label for="">Rechnungsbetrag:</label>
+          <input type="number" name="" id="AmountInputElement" required />
+          <label for="">Personenanzahl:</label>
+          <input
+            type="number"
+            name=""
+            id="inputNumberOfPersonsElement"
+            required />
+          <select name="" id="selectServiceQualityElement" required>
+            <option value="">Wie war der Service?</option>
+            <option value="super">Super Service</option>
+            <option value="medium">Mittlerer Service</option>
+            <option value="bad">Schlechter Service</option>
+          </select>
+          <button type="submit" id="button">Berechnen</button>
+        </form>
+        <section id="resultSectionElement"></section>
+      </div>
+    </main>
+    <script type="module" src="./src/TrinkgeldRechner.ts"></script>
   </body>
 </html>
