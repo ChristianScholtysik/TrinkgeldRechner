@@ -22,8 +22,7 @@ calculateButton?.addEventListener("click", calculate);
 //? Berechnung
 function calculate(event: MouseEvent) {
   event.preventDefault();
-  console.log("Klick");
-
+  // console.log("Klick");
   // Trinkgeld berechnen
   const invoiceAmount: number = parseFloat(invoiceAmountElement.value);
   console.log(invoiceAmount);
@@ -56,7 +55,7 @@ function calculate(event: MouseEvent) {
   console.log(finalTip);
   const globalAmount = finalTip + invoiceAmount;
   const pricePerPerson = globalAmount / numberOfPersons;
-  resultElements(finalTip, globalAmount, pricePerPerson); //TODO:
+  resultElements(finalTip, globalAmount, pricePerPerson);
 }
 
 //?Result Element erzeugen
@@ -65,6 +64,9 @@ function resultElements(
   globalAmount: number,
   pricePerPerson: number
 ) {
+  if (resultFieldElement) {
+    resultFieldElement.innerHTML = "";
+  }
   const card = document.createElement("div");
   card.className = "ResultCard";
   const tipElement = document.createElement("p");
