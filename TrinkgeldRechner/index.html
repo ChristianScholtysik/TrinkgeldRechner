@@ -4,28 +4,37 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
     <title>TrinkgeldRechner</title>
   </head>
   <body>
     <main>
-      <div>
+      <div id="wrapper">
         <h2>Trinkgeld-Rechner</h2>
         <form action="">
-          <label for="">Rechnungsbetrag:</label>
-          <input type="number" name="" id="AmountInputElement" required />
-          <label for="">Personenanzahl:</label>
-          <input
-            type="number"
-            name=""
-            id="inputNumberOfPersonsElement"
-            required />
-          <select name="" id="selectServiceQualityElement" required>
-            <option value="">Wie war der Service?</option>
-            <option value="super">Super Service</option>
-            <option value="medium">Mittlerer Service</option>
-            <option value="bad">Schlechter Service</option>
-          </select>
-          <button type="submit" id="button">Berechnen</button>
+          <div class="formElement">
+            <label for="">Rechnungsbetrag:</label>
+            <input type="number" name="" id="AmountInputElement" required />
+          </div>
+          <div class="formElement">
+            <label for="">Personenanzahl:</label>
+            <input
+              type="number"
+              name=""
+              id="inputNumberOfPersonsElement"
+              required />
+          </div>
+          <div class="formElement">
+            <select name="" id="selectServiceQualityElement" required>
+              <option value="">Wie war der Service?</option>
+              <option value="super">Super Service</option>
+              <option value="medium">Mittlerer Service</option>
+              <option value="bad">Schlechter Service</option>
+            </select>
+          </div>
+          <div class="formElement">
+            <button type="submit" id="button">Berechnen</button>
+          </div>
         </form>
         <section id="resultSectionElement"></section>
       </div>
